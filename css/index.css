@@ -1,0 +1,171 @@
+/* ---------- ROOT COLOR VARIABLES ---------- */
+/* Makes color changes easy across entire app */
+:root{
+
+  /* Background gradient colors */
+  --bg-1: #FAF8F4;   /* top gradient color */
+  --bg-2: #e8e4dc;   /* bottom gradient color */
+
+  /* Card container */
+  --card: #FFFFFF;
+
+  /* Text colors */
+  --text: #2E2E2E;        /* primary text */
+  --text-2: #6B7280;      /* secondary text */
+  --placeholder: #9CA3AF; /* placeholder text */
+
+  /* Buttons */
+  --primary: #8FAFA3;
+  --primary-hover: #7a9b8f;
+
+  /* Links */
+  --link: #4F8A8B;
+  --link-hover: #3d6d6e;
+
+  /* Error message */
+  --err-bg: #FEF2F2;
+  --err-border: #FECACA;
+  --err-text: #B91C1C;
+
+  /* Visual effects */
+  --border: #d7dbe2;
+  --shadow: 0 14px 30px rgba(0,0,0,.10);
+}
+
+/* Apply box sizing globally */
+*{ box-sizing: border-box; }
+
+/* Full height layout */
+html, body{
+  height: 100%;
+}
+
+/* Page body styling */
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+
+  /* Text color */
+  color: var(--text);
+
+  /* Background gradient */
+  background: linear-gradient(180deg, var(--bg-1), var(--bg-2));
+}
+
+/* Center content vertically */
+.page{
+  min-height: 100vh;
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content:flex-start;
+  padding: 70px 16px 40px;
+}
+
+/* Top heading */
+.page-title{
+  margin: 0 0 26px 0;
+  text-align:center;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-2);
+}
+
+/* Login card */
+.card{
+  width: 520px;
+  max-width: 100%;
+  background: var(--card);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  padding: 30px 34px 26px;
+}
+
+/* Labels above inputs */
+.label{
+  display:block;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 18px 0 9px;
+}
+
+/* Input wrapper */
+.field{
+  display:flex;
+  align-items:center;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background:#fff;
+  padding: 10px 12px;
+}
+
+/* Icon container */
+.icon{
+  margin-right: 10px;
+}
+
+/* Input field */
+.field input{
+  width:100%;
+  border:none;
+  outline:none;
+  font-size:14px;
+}
+
+/* Placeholder styling */
+.field input::placeholder{
+  color: var(--placeholder);
+}
+
+/* Input focus highlight */
+.field:focus-within{
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(143,175,163,.25);
+}
+
+/* Right aligned row */
+.row{
+  display:flex;
+  justify-content:flex-end;
+  margin-top: 12px;
+}
+
+/* Forgot password link */
+.link{
+  font-size:13px;
+  color: var(--link);
+  text-decoration:none;
+}
+
+/* Hover link */
+.link:hover{
+  color: var(--link-hover);
+}
+
+/* Sign in button */
+.btn{
+  width:100%;
+  border:none;
+  margin-top:22px;
+  padding:14px;
+  border-radius:10px;
+  background: var(--primary);
+  color:white;
+  font-weight:700;
+  cursor:pointer;
+}
+
+/* Button hover */
+.btn:hover{
+  background: var(--primary-hover);
+}
+
+/* Error message styling */
+.alert{
+  background: var(--err-bg);
+  border:1px solid var(--err-border);
+  color: var(--err-text);
+  padding:10px;
+  border-radius:10px;
+  margin-bottom:10px;
+}
